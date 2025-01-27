@@ -2,7 +2,14 @@
     <h2 class="text-center mb-5 gradient-text">
         Mes tâches
     </h2>
-    <div *ngFor="let task of tasks" class="list-group-item">
-        {{ task.title }}
+    <div *ngFor="let task of tasks" class="list-group-item" [class.completed]="task.completed">
+        <div class="form-check d-flex align-items-center">
+            <input type="checkbox" class="form-check-input" [checked]="task.completed" (change)=" toggleTask(task)">
+            <label class="form-check-label ms-2 user-select-none">
+                {{ task.title }}
+            </label>
+        </div>
+
+
     </div>
 </div>

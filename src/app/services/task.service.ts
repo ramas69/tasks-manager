@@ -18,4 +18,11 @@ export class TaskService {
   getTasks(): Task[] {
     return this.tasks;
   }
+
+  toggleTask(task: Task): void {
+    const index = this.tasks.findIndex(t => t.id === task.id);
+    if (index !== -1) {
+      this.tasks[index].completed = !this.tasks[index].completed;
+    }
+  }
 }

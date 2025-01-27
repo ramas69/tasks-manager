@@ -22,4 +22,10 @@ export class TaskListComponent implements OnInit {
   }
 
 
+  toggleTask(task: Task): void {
+    this.taskService.toggleTask(task);
+    this.tasks = this.taskService.getTasks();
+  }
+
+
 }
