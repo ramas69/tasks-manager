@@ -11,6 +11,9 @@
     </div>
     <div class="invalid-feedback d-block"
         *ngIf="titleInput.invalid && (titleInput.dirty || titleInput.touched || formSubmitted)">
+        <small *ngIf="titleInput.errors?.['required']">
+            Le titre de la tâche est requis
+        </small>
         <small *ngIf="titleInput.errors?.['minlength']">
             Le titre doit contenir au moins 3 caractères
         </small>
