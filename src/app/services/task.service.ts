@@ -25,4 +25,8 @@ export class TaskService {
       this.tasks[index].completed = !this.tasks[index].completed;
     }
   }
+
+  deleteTask(task: Task): void {
+    this.tasks = this.tasks.filter(t => t.id !== task.id);
+  }
 }
