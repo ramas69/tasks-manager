@@ -1,0 +1,21 @@
+<form (ngSubmit)="addTask()" #taskForm="ngForm" class="mb-4">
+    <div class="input-group mb-5">
+        <input type="text" class="form-control" name="newTaskTitle" [(ngModel)]="newTaskTitle" #titleInput="ngModel"
+            required minlength="3" maxlength="50"
+            [class.is-invalid]="(titleInput.invalid && (titleInput.dirty || titleInput.touched)) || (formSubmitted && !validateTaskTitle(newTaskTitle))"
+            placeholder="Nouvelle tâche...">
+        <button type="submit" class="btn btn-primary" [disabled]="taskForm.invalid">
+            <i class="bi bi-plus-lg me-2"></i>
+            Ajouter
+        </button>
+    </div>
+    <div class="invalid-feedback d-block"
+        *ngIf="titleInput.invalid && (titleInput.dirty || titleInput.touched || formSubmitted)">
+        <small *ngIf="titleInput.errors?.['minlength']">
+            Le titre doit contenir au moins 3 caractères
+        </small>
+        <small *ngIf="titleInput.errors?.['maxlength']">
+            Le titre ne doit pas dépasser 50 caractères
+        </small>
+    </div>
+</form>

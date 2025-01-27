@@ -29,4 +29,16 @@ export class TaskService {
   deleteTask(task: Task): void {
     this.tasks = this.tasks.filter(t => t.id !== task.id);
   }
+
+  addTask(title: string): void {
+    if (title.trim().length >= 3 && title.trim().length <= 50) {
+      const newTask: Task = {
+        id: nanoid(),
+        title: title.trim(),
+        completed: false
+      };
+      this.tasks = [...this.tasks, newTask];
+
+    }
+  }
 }
