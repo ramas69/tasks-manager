@@ -1,27 +1,57 @@
-# TaskManager
+# TodoList Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
+Une application de gestion de tâches moderne et élégante développée avec Angular.
 
-## Development server
+## 🚀 Fonctionnalités
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- ✅ Création de tâches
+- 🔄 Marquage des tâches comme complétées
+- 🗑️ Suppression de tâches
+- ✨ Interface utilisateur moderne et responsive
+- 🎨 Design épuré avec effets visuels
+- ✔️ Validation des formulaires
 
-## Code scaffolding
+## 🛠️ Technologies Utilisées
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 18.0.0
+- Bootstrap 5.3.3
+- Bootstrap Icons
+- nanoid
 
-## Build
+## 📋 Prérequis
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js (version 18 ou supérieure)
+- npm (version 9 ou supérieure)
 
-## Running unit tests
+## 🔧 Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clonez le repository :
+```bash
+git clone [url-du-repo]
+```
 
-## Running end-to-end tests
+2. Installez les dépendances :
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Lancez l'application :
+```bash
+ng serve
+```
 
-## Further help
+4. Ouvrez votre navigateur et accédez à `http://localhost:4200`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 💻 Utilisation
+
+- Pour ajouter une tâche : Saisissez le titre dans le champ de texte et cliquez sur "Ajouter"
+- Pour marquer une tâche comme complétée : Cliquez sur la case à cocher
+- Pour supprimer une tâche : Cliquez sur l'icône de corbeille
+
+## 🤝 Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou à soumettre une pull request.
+
+## 📝 Licence
+
+Ce projet est sous licence MIT.
